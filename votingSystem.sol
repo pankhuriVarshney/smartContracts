@@ -11,4 +11,13 @@ contract _votingSystem
 
     Candidate[] public candidates;
 
+    address admin;
+    mapping(address => bool) public voters;
+
+
+    constructor() 
+    {
+        admin=msg.sender;
+    }
+    
 }
