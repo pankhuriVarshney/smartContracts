@@ -22,7 +22,7 @@ contract studentCertificationSystem {
     constructor() {
         admin = msg.sender;
     }
-    
+
     function addCertificate(address studentAddress, string memory studentName, string memory certificateName) public {
         count++;
         students[studentAddress] = Student({
@@ -45,3 +45,4 @@ contract studentCertificationSystem {
     function displayAll(address studentAddress) public view returns(Certificate[] memory){
         return certificates[studentAddress];
     }
+}
