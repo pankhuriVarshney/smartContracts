@@ -19,6 +19,10 @@ contract studentCertificationSystem {
     address public admin;
     uint count=0;
 
+    constructor() {
+        admin = msg.sender;
+    }
+    
     function addCertificate(address studentAddress, string memory studentName, string memory certificateName) public {
         count++;
         students[studentAddress] = Student({
